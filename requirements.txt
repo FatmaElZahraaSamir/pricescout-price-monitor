@@ -1,0 +1,19 @@
+# Core
+httpx>=0.27
+beautifulsoup4>=4.12
+lxml>=5.0
+pydantic>=2.6
+pandas>=2.1
+openpyxl>=3.1
+
+# Dashboard
+streamlit>=1.50
+plotly>=5.20
+
+# AI Extract (Gemini, OpenAI, Groq or Ollama through the OpenAI-compatible API)
+openai>=1.40
+
+# Optional engines / integrations
+playwright>=1.44      # JavaScript-rendered sites: run `playwright install chromium` once
+gspread>=6.0          # Google Sheets export (service account)
+pymongo>=4.6          # MongoDB export

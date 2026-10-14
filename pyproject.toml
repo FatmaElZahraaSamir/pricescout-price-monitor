@@ -1,0 +1,18 @@
+[project]
+name = "pricescout"
+version = "1.0.0"
+description = "Web scraper and price monitor with AI extraction from any store page (httpx + Playwright, LLM function calling, SQLite history, Excel/Sheets/MongoDB exports)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Fatma El Zahraa Samir" }]
+
+[project.scripts]
+pricescout = "pricescout.cli:main"
+
+[tool.setuptools]
+packages = ["pricescout"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

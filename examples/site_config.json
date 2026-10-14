@@ -1,0 +1,26 @@
+{
+  "name": "example-woocommerce-store",
+  "domains": ["shop.example.com"],
+  "listing": {
+    "item": "li.product",
+    "fields": {
+      "title": {"css": "h2.woocommerce-loop-product__title"},
+      "url": {"css": "a.woocommerce-LoopProduct-link", "attr": "href", "type": "url"},
+      "price": {"css": "span.price ins .amount, span.price > .amount", "type": "price"},
+      "image_url": {"css": "img", "attr": "src", "type": "url"}
+    },
+    "next_page": "a.next.page-numbers"
+  },
+  "detail": {
+    "fields": {
+      "title": {"css": "h1.product_title"},
+      "price": {"css": "p.price ins .amount, p.price > .amount", "type": "price"},
+      "in_stock": {"css": "p.stock", "type": "in_stock"},
+      "stock_count": {"css": "p.stock", "type": "int_in_text"},
+      "category": {"css": "span.posted_in a"},
+      "upc": {"css": "span.sku"},
+      "description": {"css": "div.woocommerce-product-details__short-description"}
+    }
+  },
+  "categories": "ul.product-categories li a"
+}
