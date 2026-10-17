@@ -124,6 +124,11 @@ def monitor_page() -> None:
             st.error(str(exc))
             return None
         except Exception as exc:  # network down, browser not installed, invalid URL...
+            if engine == "playwright" and "executable doesn't exist" in str(exc).lower():
+                st.error("The headless browser isn't installed on this server, so this run can't use the "
+                         "Playwright engine. Choose **Fast HTTP** here, or run `playwright install chromium` "
+                         "once on your own computer to use it there.")
+                return None
             hint = ""
             if engine == "playwright":
                 hint = " Tip: run `playwright install chromium` once to download the headless browser."
